@@ -2,14 +2,14 @@ body{
     margin:0;
     padding: 0;
     cursor: url(img_mem/cursor1.png), auto;
-    background-image: linear-gradient(rgb(152, 253, 231), rgb(255, 255, 255));
+    background-image: linear-gradient(rgb(152, 246, 253), rgb(248, 200, 242));
     background-repeat: no-repeat;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 
@@ -20,6 +20,32 @@ body{
     text-shadow: 7px 7px 7px rgba(54, 52, 52, 0.699);
 }
 
-div {
+#jeu {
     display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgContainer  {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+}
+
+.imgBack {
+    z-index: 100;
+}
+
+.imgFront {
+    display: none;
 }

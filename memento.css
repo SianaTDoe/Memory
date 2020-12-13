@@ -1,0 +1,25 @@
+body{
+    margin:0;
+    padding: 0;
+    cursor: url(img_mem/cursor1.png), auto;
+    background-image: linear-gradient(rgb(152, 253, 231), rgb(255, 255, 255));
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+#title {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    text-shadow: 7px 7px 7px rgba(54, 52, 52, 0.699);
+}
+
+div {
+    display: flex;
+}

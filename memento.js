@@ -14,10 +14,27 @@ while (allImg.length != 0) {
 
 
 const backs = document.querySelectorAll(".imgBack");
+
+let isSame = null;
+
 backs.forEach(back => {
     back.addEventListener('click', () => {
-      back.style.display = 'none';
-      back.nextElementSibling.style.display = 'block';
+
+        if (isSame == null){
+            isSame = back.nextElementSibling; 
+        } else if (back.nextElementSibling == isSame) {
+            back.parentElement.style.visibily = 'hidden';
+            isSame.parentElement.style.visibily = 'hidden';
+            isSame = null;
+        } else {
+            back.style.display = 'block';
+            isSame.previousSibling.style.display = 'block';
+            isSame = null;
+            
+        }
+
+        back.style.display = 'none';
+        back.nextElementSibling.style.display = 'block';
     });
 });
 

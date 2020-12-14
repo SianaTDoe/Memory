@@ -9,7 +9,7 @@ while (allImg.length != 0) {
     const index = Math.random() * allImg.length << 0;
     const chemin = allImg.splice(index, 1)[0];
     const image = `<fieldset class="field1">
-<fieldset class="field2"><div class="imgContainer"><img class="imgBack" src="img_mem/memback.png"><img name="${chemin}" class="imgFront" src="img_mem/${chemin}"></div></fieldset> </fieldset>`;
+<fieldset class="field2"><div class="imgContainer"><img class="imgBack" src="img_mem/memback.png"><img name="${chemin}" class="imgFront" src="img_mem/${chemin}"></div></fieldset></fieldset>`;
     container.insertAdjacentHTML('beforeend', image);
 }
 
@@ -77,7 +77,6 @@ function perdu(back) {
         block = false;
         result.textContent = "Essaye encore !";
     }, 1500)
-    
 }
 
 // function fin() {

@@ -62,14 +62,15 @@ img {
 
 .field2 {
     /* background-image: linear-gradient(rgb(152, 246, 253), rgb(248, 200, 242)); */
-    background-image: url("img_mem/backmem17.jfif");
+    background-image: url("img_mem/backmem.jfif");
    
 }
 
 
 #result {
     font-size: larger;
-    color:rgb(73, 67, 72);
+    color:rgb(223, 136, 208);
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline overline;
 }

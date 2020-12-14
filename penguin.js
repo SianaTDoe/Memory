@@ -2,14 +2,14 @@ const title = document.querySelector("#title");
 const container = document.querySelector('#jeu');
 let result = document.querySelector('#result');
 
-const linkImg = ['mem1.png', 'mem2.png', 'mem3.png', 'mem4.png', 'mem5.png', 'mem6.png'];
+const linkImg = ['penguin1.png', 'penguin2.png', 'penguin3.png', 'penguin4.png', 'penguin5.png', 'penguin6.png'];
 const allImg = [...linkImg, ...linkImg];
 
 while (allImg.length != 0) {
     const index = Math.random() * allImg.length << 0;
     const chemin = allImg.splice(index, 1)[0];
     const image = `<fieldset class="field1">
-<fieldset class="field2"><div class="imgContainer"><img class="imgBack" src="img_mem/memback.png"><img name="${chemin}" class="imgFront" src="img_mem/${chemin}"></div></fieldset></fieldset>`;
+<fieldset class="field2"><div class="imgContainer"><img class="imgBack" src="Penguin_mem/imgbackpengu.png"><img name="${chemin}" class="imgFront" src="Penguin_mem/${chemin}"></div></fieldset></fieldset>`;
     container.insertAdjacentHTML('beforeend', image);
 }
 
@@ -68,7 +68,7 @@ function gagne(back) {
             isSame = null;
             block = false;
             result.textContent = "Génial !";
-        }, 1500)
+        }, 1000)
     }
 }
 
@@ -87,6 +87,6 @@ function perdu(back) {
         isSame = null;
         block = false;
         result.textContent = "Essaye encore !";
-    }, 1500)
+    }, 1000)
 }
 

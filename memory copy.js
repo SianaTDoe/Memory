@@ -18,6 +18,7 @@ const backs = document.querySelectorAll('.imgBack');
 
 let isSame = null;
 let block = false;
+let score = 0;
 
 backs.forEach(back => {
     back.addEventListener('click', () => {
@@ -48,17 +49,27 @@ backs.forEach(back => {
 })
 
 function gagne(back) {
+    score++;
     block = true;
-    setTimeout(() => {
-        const elements = document.querySelectorAll(`img[name='${isSame}']`);
-        elements.forEach(element => element.parentElement.style.visibility = 'hidden')
+    if (score == linkImg.length) {
+        result.textContent = "Gagné !";
+        const elements = document.querySelectorAll('.imgFront');
+        elements.forEach(element => {
+            element.parentElement.style.visibility = 'visible';
+            element.style.display = 'block';
+        })
+    } else {
+        setTimeout(() => {
+            const elements = document.querySelectorAll(`img[name='${isSame}']`);
+            elements.forEach(element => element.parentElement.style.visibility = 'hidden')
 
-        back.parentElement.style.visibility = 'hidden';
+            back.parentElement.style.visibility = 'hidden';
 
-        isSame = null;
-        block = false;
-        result.textContent = "Génial !";
-    }, 1500)
+            isSame = null;
+            block = false;
+            result.textContent = "Génial !";
+        }, 1500)
+    }
 }
 
 function perdu(back) {
@@ -79,6 +90,3 @@ function perdu(back) {
     }, 1500)
 }
 
-// function fin() {
-//     if div vide alors result = partie terminée !
-// }

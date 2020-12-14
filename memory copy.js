@@ -1,5 +1,6 @@
-const title = document.querySelector("#title"); 
+const title = document.querySelector("#title");
 const container = document.querySelector('#jeu');
+let result = document.querySelector('#result');
 
 const linkImg = ['mem1.png', 'mem2.png', 'mem3.png', 'mem4.png', 'mem5.png', 'mem6.png'];
 const allImg = [...linkImg, ...linkImg];
@@ -7,7 +8,8 @@ const allImg = [...linkImg, ...linkImg];
 while (allImg.length != 0) {
     const index = Math.random() * allImg.length << 0;
     const chemin = allImg.splice(index, 1)[0];
-    const image = `<div class="imgContainer"><img class="imgBack" src="img_mem/memback.png"><img name="${chemin}" class="imgFront" src="img_mem/${chemin}"></div>`;
+    const image = `<fieldset class="field1">
+<fieldset class="field2"><div class="imgContainer"><img class="imgBack" src="img_mem/memback.png"><img name="${chemin}" class="imgFront" src="img_mem/${chemin}"></div></fieldset> </fieldset>`;
     container.insertAdjacentHTML('beforeend', image);
 }
 
@@ -21,13 +23,13 @@ backs.forEach(back => {
     back.addEventListener('click', () => {
 
         let color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16); //<<0 = math.floor
-        title.style.color = color; 
+        title.style.color = color;
 
         if (!block) {
             back.style.display = 'none';
             back.nextElementSibling.style.display = 'block';
 
-          
+
 
             if (isSame == null) {
                 console.log('new compare');
@@ -40,7 +42,7 @@ backs.forEach(back => {
                 perdu(back);
             }
         }
-       
+
 
     })
 })
@@ -55,6 +57,7 @@ function gagne(back) {
 
         isSame = null;
         block = false;
+        result.textContent = "Génial !";
     }, 1500)
 }
 
@@ -72,6 +75,11 @@ function perdu(back) {
 
         isSame = null;
         block = false;
+        result.textContent = "Essaye encore !";
     }, 1500)
+    
 }
 
+// function fin() {
+//     if div vide alors result = partie terminée !
+// }

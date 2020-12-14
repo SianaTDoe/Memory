@@ -1,8 +1,10 @@
 body{
     margin:0;
     padding: 0;
-    cursor: url(img_mem/cursor1.png), auto;
+    /* cursor: url(img_mem/cursor1.png), auto; */
     background-image: linear-gradient(rgb(152, 246, 253), rgb(248, 200, 242));
+    /* background-image: url("img_mem/backmem16.jfif"); */
+    /* background-color: rgb(245, 235, 192); */
     background-repeat: no-repeat;
     width: 100vw;
     min-height: 60vh;
@@ -12,15 +14,13 @@ body{
     justify-content: space-around;
 }
 
-
-
-
 #title {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 50px;
     text-shadow: 7px 7px 7px rgba(54, 52, 52, 0.699);
 }
+
 
 #jeu {
     display: flex;
@@ -52,3 +52,24 @@ img {
     display: none;
 }
 
+.field1 {
+    background-image: url("img_mem/fieldsetback.jpg");
+    border: 2%;
+    cursor: url(img_mem/cursor1.png), auto;
+    
+}
+
+
+.field2 {
+    /* background-image: linear-gradient(rgb(152, 246, 253), rgb(248, 200, 242)); */
+    background-image: url("img_mem/backmem17.jfif");
+   
+}
+
+
+#result {
+    font-size: larger;
+    color:rgb(73, 67, 72);
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

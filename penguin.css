@@ -1,115 +1,19 @@
 body{
-    margin:0;
-    padding: 0;
-    /* cursor: url(img_mem/cursor1.png), auto; */
     background-image: linear-gradient(rgb(144, 243, 250), rgb(84, 87, 235));
-    /* background-image: url("img_mem/backmem16.jfif"); */
-    /* background-color: rgb(245, 235, 192); */
-    background-repeat: no-repeat;
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
 }
 
-#title {
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 50px;
-    text-shadow: 7px 7px 7px rgba(54, 52, 52, 0.699);
-}
-
-
-#jeu {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1600px;
-    /* width: 80%; */
-    display: flex;
-    justify-content: center;
-}
-
-@media screen and (max-width: 1600px){
-    #jeu {
-        width: 1300px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    #jeu {
-        width: 100%;
-    }
-}
-
-.imgContainer  {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-img {
-    width: 90%;
-    height: 90%;
-    position: absolute;
-      
-}
-
-.imgBack {
-    z-index: 100;
-}
-
-.imgFront {
-    display: none;
-}
 
 .field1 {
     background-image: url("Penguin_mem/pbackground4.jfif");
-    /* border: 2%; */
     cursor: url(Penguin_mem/pengcursor.png), auto;
-    padding: 10px;
-    margin: 5px;
 }
 
 
 .field2 {
-    /* background-image: linear-gradient(rgb(152, 246, 253), rgb(248, 200, 242)); */
     background-image: url("Penguin_mem/back4.jpg");
-    padding: 10px;
 }
 
 
 #result {
-    font-size: larger;
     color:rgb(5, 1, 245);
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-decoration: underline overline;
-}
-
-.fieldthemes {
-    border-radius: 5%;
-    border-style: groove;
-    color: grey;
-    cursor: url(cursor_th.png), default;
-}
-
-legend {
-    font-weight: bold;
-    color: grey;
-}
-
-.themebut {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-}
-
-.theme {
-    margin: 0 20px;
 }

@@ -99,7 +99,7 @@ function game() {
     function gagne(back) {
         score++;
         block = true;
-        if (score == linkImg[theme].length) {
+        if (score == linkImg[theme].front.length) {
             result.textContent = "Gagné !";
             const elements = document.querySelectorAll('.imgFront');
             elements.forEach(element => {

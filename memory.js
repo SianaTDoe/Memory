@@ -1,5 +1,6 @@
 import { linkImg } from "./library.js";
 
+const linkCSS = document.getElementById('css');
 const title = document.querySelector("#title");
 const container = document.querySelector('#jeu');
 const result = document.querySelector('#result');
@@ -11,7 +12,7 @@ const result = document.querySelector('#result');
 
 const themeButtons = document.querySelectorAll(".theme");
 let theme = 1;
-let css = ""
+let css = "saturn";
 
 let score = 0;
 
@@ -21,6 +22,7 @@ game();
 themeButtons.forEach(themeButton =>
     themeButton.addEventListener("click", () => {
       theme = Array.prototype.indexOf.call(themeButtons, themeButton);
+      css = themeButton.id;
       game();
     })
 );
@@ -45,13 +47,18 @@ function resetGame () {
 function game() {
     resetGame();
 
-    const allImg = [...linkImg[theme], ...linkImg[theme]];
+    linkCSS.setAttribute('href', css + '.css');
+
+    const allImg = [...linkImg[theme].front, ...linkImg[theme].front];
+    const imgBack = linkImg[theme].back;
+
+    title.innerText = linkImg[theme].title;
 
     while (allImg.length != 0) {
         const index = Math.random() * allImg.length << 0;
         const chemin = allImg.splice(index, 1)[0];
         const image = `<fieldset class="field1">
-<fieldset class="field2"><div class="imgContainer"><img class="imgBack" src="img_mem/memback.png"><img name="${chemin}" class="imgFront" src="${chemin}"></div></fieldset></fieldset>`;
+<fieldset class="field2"><div class="imgContainer"><img class="imgBack" src="${imgBack}"><img name="${chemin}" class="imgFront" src="${chemin}"></div></fieldset></fieldset>`;
         container.insertAdjacentHTML('beforeend', image);
     }
 
@@ -92,7 +99,7 @@ function game() {
     function gagne(back) {
         score++;
         block = true;
-        if (score == linkImg[theme].length) {
+        if (score == linkImg[theme].front.length) {
             result.textContent = "Gagné !";
             const elements = document.querySelectorAll('.imgFront');
             elements.forEach(element => {

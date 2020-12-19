@@ -90,3 +90,27 @@ img {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: underline overline;
 }
+
+
+.fieldthemes {
+    border-radius: 5%;
+    border-style: groove;
+    color: grey;
+    cursor: url(cursor_th.png), default;
+}
+
+legend {
+    font-weight: bold;
+    color: grey;
+}
+
+.themebut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.theme {
+    margin: 0 20px;
+}

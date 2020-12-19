@@ -1,10 +1,7 @@
 body{
     margin:0;
     padding: 0;
-    /* cursor: url(img_mem/cursor1.png), auto; */
-    background-image: linear-gradient(rgb(144, 243, 250), rgb(84, 87, 235));
-    /* background-image: url("img_mem/backmem16.jfif"); */
-    /* background-color: rgb(245, 235, 192); */
+    background-image: linear-gradient(rgb(152, 253, 214), rgb(238, 187, 130));
     background-repeat: no-repeat;
     width: 100vw;
     min-height: 100vh;
@@ -26,7 +23,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     max-width: 1600px;
-    /* width: 80%; */
     display: flex;
     justify-content: center;
 }
@@ -68,28 +64,27 @@ img {
 }
 
 .field1 {
-    background-image: url("Penguin_mem/pbackground4.jfif");
-    /* border: 2%; */
-    cursor: url(Penguin_mem/pengcursor.png), auto;
+    background-image: url("Dino_mem/field_dino.jfif");
+    cursor: url(Dino_mem/dino_cursor.png), auto;
     padding: 10px;
     margin: 5px;
 }
 
 
 .field2 {
-    /* background-image: linear-gradient(rgb(152, 246, 253), rgb(248, 200, 242)); */
-    background-image: url("Penguin_mem/back4.jpg");
+    background-image: url("Dino_mem/dino_field2.jfif");
     padding: 10px;
 }
 
 
 #result {
     font-size: larger;
-    color:rgb(5, 1, 245);
+    color:rgb(7, 122, 88);
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: underline overline;
 }
+
 
 .fieldthemes {
     border-radius: 5%;
